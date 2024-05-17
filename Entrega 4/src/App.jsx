@@ -4,10 +4,12 @@ import TaskList from './components/TaskList';
 import './App.css'
 
 function App() {
+
   const [tasks, setTasks] = useState([]);
 
   const addTask = (task) => {
     setTasks([...tasks, { id: Date.now(), text: task, completed: false }]);
+
   };
 
   const taskComplet = (taskId) => {
@@ -33,7 +35,8 @@ function App() {
         deleteTask={deleteTask}
       />
 
-      <p>Clickear en la tarea para completar!!!</p>
+      <p>Al agregar una tarea puede Clickearla para marcarla como completada!</p>
+
     </div>
   );
 }
